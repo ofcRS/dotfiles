@@ -4,7 +4,7 @@
 
 ### 1. **Installation**
 
-bash```
+```bash
 git clone https://github.com/ofcRS/dotfiles.git
 cd dotfiles
 chmod +x init.sh
