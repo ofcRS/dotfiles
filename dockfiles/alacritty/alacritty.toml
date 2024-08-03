@@ -1,0 +1,54 @@
+# Alacritty configuration file (alacritty.toml)
+
+
+import = [
+    #'./cybertheme.toml',
+    './tokyonight.toml'
+]
+
+[window]
+dimensions = { columns = 100, lines = 36 }
+padding = { x = 5, y = 65 }
+opacity = 0.65
+blur = true
+option_as_alt = "Both"
+startup_mode = "Windowed"
+dynamic_padding = true
+decorations = "Transparent"
+
+[shell]
+program = "/usr/local/bin/fish"
+
+[font]
+normal = { family = "FiraCode Nerd Font Mono", style = "Retina" }
+
+size = 20.0
+
+[colors]
+transparent_background_colors = true
+draw_bold_text_with_bright_colors = true
+
+[keyboard]
+bindings = [
+    { key = "E", mods = "Command", chars = "\u001bOF" }, # End of line
+    { key = "E", mods = "Alt", chars = "\u001bf" }, # Next word
+    { key = "B", mods = "Command", chars = "\u001bOH" }, # Beginning of line
+    { key = "B", mods = "Alt", chars = "\u001bb" }, # Prev word
+    { key = "D", mods = "Alt", chars = "\u001bd" }, # Delete word
+
+    { key = "V", mods = "Alt", action = "ToggleViMode" }, 
+
+    { key = "F5", mods = "Shift", action = "ToggleSimpleFullscreen" },
+    { key = "F5", action = "ToggleFullscreen" },
+
+    { key = "Tab", mods = "Control", action = "SelectNextTab" },
+    { key = "Tab", mods = "Control|Shift", action = "SelectPreviousTab" },
+]
+
+[debug]
+
+print_events = true
+prefer_egl = true
+
+[env]
+# TERM = "alacritty"

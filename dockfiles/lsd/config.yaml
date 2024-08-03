@@ -1,0 +1,14 @@
+classic: false
+
+blocks:
+  - name
+  - size
+  - date
+
+date: '+%d.%m.%y %H:%M'
+
+layout: grid
+
+sorting:
+  column: extension
+
